@@ -9,10 +9,11 @@ This is a pure Java porA jt, build-managed by Maven, with Lombok for less boiler
 ### Original Instructions
 Controls:
 
-| Key         | Action                                                 | 
-| :---------------- | :-------------------------------------------------------:| 
+| Key               | Action                                                   | 
+| :---------------- | :--------------------------------------------------------| 
 |  **G**            | show all of the generations where the dinosaurs improved |
 |  **N**            | show Nothing (to speed up the evolution)                 |
-|  **+**            | speed up framerate (game speed) |
-|  **-**            | slow down framerate (game speed) |
-|  **Arrow Keys**   | navigate through generations |
+|  **+**            | speed up framerate (game speed)                          |
+|  **-**            | slow down framerate (game speed)                         |
+|  **Arrow Keys**   | navigate through generations                             |
+|  **ESC**          | close application                                        |
