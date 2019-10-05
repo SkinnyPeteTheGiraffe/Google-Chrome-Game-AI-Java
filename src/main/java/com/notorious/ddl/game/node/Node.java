@@ -69,13 +69,13 @@ public class Node {
         //you get it
         if (node.layer < layer) {
             for (int i = 0; i < node.outputConnections.size(); i++) {
-                if (node.outputConnections.get(i).getToNode() == this) {
+                if (node.outputConnections.get(i).getToNode().equals(this)) {
                     return true;
                 }
             }
         } else {
-            for (int i = 0; i < outputConnections.size(); i++) {
-                if (outputConnections.get(i).getToNode() == node) {
+            for (ConnectionGene outputConnection : outputConnections) {
+                if (outputConnection.getToNode().equals(node)) {
                     return true;
                 }
             }

@@ -30,8 +30,8 @@ public class DinoGame extends PApplet {
     public void settings() {
         super.settings();
         Globals.initialize(this);
-        size(800, 600);
-        fullScreen();
+        size(1600, 900);
+        fullScreen(2);
     }
 
     public void setup() {

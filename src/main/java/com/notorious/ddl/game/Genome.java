@@ -8,6 +8,8 @@ import processing.core.PVector;
 import processing.core.PGraphics;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.IntStream;
 
@@ -216,7 +218,7 @@ public class Genome {
     public boolean fullyConnected() {
         int maxConnections = 0;
         int[] nodesInLayers = new int[layers];//array which stored the amount of nodes in each layer
-
+        //populate array
         //populate array
         nodes.forEach(node -> nodesInLayers[node.getLayer()] += 1);
 
@@ -227,7 +229,6 @@ public class Genome {
             for (int j = i + 1; j < layers; j++) {//for each layer infront of this layer
                 nodesInFront += nodesInLayers[j];//add up nodes
             }
-
             maxConnections += nodesInLayers[i] * nodesInFront;
         }
 
@@ -329,7 +330,7 @@ public class Genome {
         if (getNode(newNodeNo).getLayer() == genes.get(randomConnection).getToNode().getLayer()) {
             for (int i = 0; i < nodes.size() - 1; i++) {//dont include this newest node
                 Node node = nodes.get(i);
-                if (node.getLayer() >= getNode(newNodeNo).getOutputValue()) {
+                if (node.getLayer() >= getNode(newNodeNo).getLayer()) {
                     node.setLayer(node.getLayer() + 1);
                 }
             }
